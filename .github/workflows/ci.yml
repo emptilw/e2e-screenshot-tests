@@ -6,8 +6,6 @@ on:
   pull_request:
     branches:
       - main
-env:
-  LAB_ID: aq7-c4f81e-k3x
 jobs:
   build:
     runs-on: ubuntu-latest
