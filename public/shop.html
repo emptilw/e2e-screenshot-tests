@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Магазин техніки — Замовлення</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; }
+    h1 { font-size: 28px; color: #1f2937; }
+    .card { max-width: 360px; padding: 16px; border: 1px solid #d1d5db; border-radius: 8px; }
+    input, button { display: block; width: 100%; margin-top: 10px; padding: 8px; box-sizing: border-box; }
+  </style>
+</head>
+<body>
+  <h1 id="pageTitle">Оформлення замовлення</h1>
+  <div class="card">
+    <p id="productName">Товар: Бездротова клавіатура (1200 грн)</p>
+    <form id="orderForm">
+      <input id="customerName" type="text" placeholder="Ваше ім'я" required />
+      <input id="quantity" type="number" min="1" value="1" required />
+      <button id="orderBtn" type="submit">Підтвердити замовлення</button>
+    </form>
+    <p id="orderStatus" style="display: none; color: green; font-weight: bold;">Замовлення успішно оформлено!</p>
+  </div>
+  <script>
+    document.getElementById('orderForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      document.getElementById('orderStatus').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
